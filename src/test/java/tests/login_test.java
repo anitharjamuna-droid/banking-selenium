@@ -22,7 +22,7 @@ public class login_test {
         DashboardPage dashboardPage = new DashboardPage(driver);
 
         if (dashboardPage.isDashboardDisplayed()) {
-            System.out.println("Login Test Passed");
+            System.out.println("valid Login Test Passed");
         } else {
             System.out.println("Login Test Failed");
         }
