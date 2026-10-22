@@ -20,4 +20,8 @@ public class login_pages {
         driver.findElement(password).sendKeys(pass);
         driver.findElement(loginButton).click();
     }
+
+    public boolean isErrorMessageDisplayed() {
+        return driver.findElement(By.className("error")).isDisplayed();
+    }
 }

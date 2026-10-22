@@ -17,16 +17,13 @@ public class login_test {
 
         login_pages loginPage = new login_pages(driver);
 
-        loginPage.login("john", "demo");
-
-        DashboardPage dashboardPage = new DashboardPage(driver);
-
-        if (dashboardPage.isDashboardDisplayed()) {
-            System.out.println("valid Login Test Passed");
+        loginPage.login("wronguser", "wrongpass");
+       
+        if (loginPage.isErrorMessageDisplayed()) {
+            System.out.println("Invalid Login Test Passed");
         } else {
-            System.out.println("Login Test Failed");
+            System.out.println("Invalid Login Test Failed");
         }
-
         driver.quit();
     }
 }
